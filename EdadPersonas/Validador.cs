@@ -4,36 +4,13 @@ public class Validador
 {
     public static string ValidaNombrePersona()
     {
-        string nombre = "";
-        bool nombreValido = false;
-        string? entrada = "";
-        while (!nombreValido)
-        {
-            Console.WriteLine("Escribe el nombre de la persona");
-            entrada = Console.ReadLine();
-            if (string.IsNullOrEmpty(entrada)) Console.WriteLine("el nombre no es válido");
-            else
-            {
-                nombreValido = true;
-                nombre = entrada;
-            }
-        }
-
-        return nombre;
+        ValidadorInput input = new ValidadorInput();
+        return input.ValidaString("Escribe el nombre de la persona");
     }
 
     public static int ValidaEdadPersona()
     {
-        int edad = 0;
-        bool edadValida = false;
-        while (!edadValida)
-        {
-            Console.WriteLine("Escribe la edad de la persona");
-            if (int.TryParse(Console.ReadLine(), out edad))
-                edadValida = true;
-            else Console.WriteLine("El valor no es válido");
-        }
-
-        return edad;
+        ValidadorInput input = new ValidadorInput();
+        return input.ValidaEntero("Escribe la edad de la persona");
     }
 }
