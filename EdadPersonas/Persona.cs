@@ -2,23 +2,15 @@
 
 public class Persona
 {
-  private int edad;
-  private string nombre;
-  private const int mayoriaEdad = 18;
+  private int _edad;
+  private string _nombre;
+  private const int MayoriaEdad = 18;
+  public string Nombre => _nombre;
+  public bool MayorDeEdad => _edad >= MayoriaEdad;
 
-  public Persona(string _nombre, int _edad)
+  public Persona(string nombre, int edad)
   {
-    nombre = _nombre;
-    edad = _edad;
-  }
-
-  public string Nombre
-  {
-    get => nombre;
-  }
-
-  public bool EsMayorDeEdad()
-  {
-    return edad > mayoriaEdad;
+    _nombre = nombre;
+    _edad = edad;
   }
 }
