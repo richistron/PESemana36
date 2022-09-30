@@ -3,7 +3,7 @@
 public class ValidadorInput
 {
     private string? entrada;
-    private bool entradaValida = false;
+    private bool entradaValida;
 
     public string ValidaString(string mensajeCaptura)
     {
