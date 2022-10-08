@@ -1,4 +1,4 @@
-﻿Puntos Extras Semana 3
+﻿Puntos Extras Semana 6
 ======================
 
 * **Nombre de la Materia**: Programación Estructurada
